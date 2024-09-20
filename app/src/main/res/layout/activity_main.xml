@@ -25,6 +25,13 @@
         android:layout_below="@id/h"
         android:layout_marginTop="25dp"
         android:text="Click me"/>
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="save"/>
+
 
 
   </RelativeLayout>
