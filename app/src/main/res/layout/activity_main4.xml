@@ -9,33 +9,40 @@
     android:gravity="center"
     tools:context=".MainActivity4">
 
-    <EditText
-        android:id="@+id/firstno"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="enter first number"/>
-    <EditText
-        android:id="@+id/secondno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="enter second number"
-        android:layout_marginTop="50dp"
-        />
-    <Button
-        android:id="@+id/buttonsum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add"
-        android:layout_below="@+id/secondno"
-        />
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="result"
-        android:textSize="20dp"
         android:gravity="center"
-        android:layout_below="@+id/buttonsum"/>
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:id="@+id/firstnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter The First Number"
+            />
+        <EditText
+            android:id="@+id/secondnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter The First Number"
+            android:layout_marginTop="25dp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/submitbtn"
+            android:text="Submit"
+            android:layout_marginTop="25dp"/>
+        <TextView
+            android:id="@+id/resultstxtview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Results"
+            android:textSize="35dp"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
 
 
 </RelativeLayout>

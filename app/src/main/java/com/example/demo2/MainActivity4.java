@@ -13,19 +13,19 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity4 extends AppCompatActivity {
-EditText fno;
-EditText sno;
-Button v1;
-TextView t1;
+    private EditText editTextNumber1;
+    private EditText editTextNumber2;
+    private Button buttonAdd,next;
+    private TextView textViewResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main4);
-        fno=findViewById(R.id.firstno);
-        sno=findViewById(R.id.secondno);
-        v1=findViewById(R.id.buttonsum);
-        t1=findViewById(R.id.result);
+        editTextNumber1 = findViewById(R.id.firstnumber);
+        editTextNumber2 = findViewById(R.id.secondnumber);
+        buttonAdd = findViewById(R.id.submitbtn);
+        textViewResult=findViewById(R.id.resultstxtview);
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -33,15 +33,15 @@ TextView t1;
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        v1.setOnClickListener(new View.OnClickListener() {
+        buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                int no1=Integer.parseInt(fno.getText().toString());
-                int no2=Integer.parseInt(sno.getText().toString());
+                int no1=Integer.parseInt(editTextNumber1.getText().toString());
+                int no2=Integer.parseInt(editTextNumber2.getText().toString());
                 int result=no1+no2;
-                t1.setText(result);
-                t1.setVisibility(View.VISIBLE);
+                textViewResult.setText("Result: " + result);
+                textViewResult.getVisibility();
             }
         });
     }
