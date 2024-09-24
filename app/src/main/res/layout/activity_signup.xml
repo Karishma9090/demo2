@@ -7,7 +7,7 @@
     android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8EC1F6"
+    android:background="@drawable/cardgradiant"
 
     tools:context=".signup">
 
@@ -24,6 +24,13 @@
             android:layout_width="180dp"
             android:layout_height="180dp"
             android:src="@drawable/pngwing"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register here"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
 
     <EditText
         android:layout_marginTop="50dp"
@@ -31,6 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="enter your first name"
+        android:textSize="25dp"
         android:drawableLeft="@drawable/baseline_account_circle_24"
         android:drawablePadding="30dp"
         />
@@ -39,6 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="enter your last name"
+        android:textSize="25dp"
         android:drawableLeft="@drawable/baseline_account_circle_24"
         android:drawablePadding="30dp"
         />
@@ -47,18 +56,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="enter your phonenumber"
+        android:textSize="25dp"
         android:drawableLeft="@drawable/baseline_add_call_24"
         android:drawablePadding="30dp"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Emailid"
+        android:textSize="25dp"
         android:drawableLeft="@drawable/baseline_assignment_24"
         android:drawablePadding="30dp"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spin1"
+            android:entries="@array/gander"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Signup"
+            android:layout_marginTop="20dp"
             />
 
 </LinearLayout>
