@@ -41,6 +41,12 @@
             android:id="@+id/multiply"
             android:text="multiplication"
             />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sub"
+            android:text="SUB"
+            />
 
         <TextView
             android:id="@+id/resultstxtview"

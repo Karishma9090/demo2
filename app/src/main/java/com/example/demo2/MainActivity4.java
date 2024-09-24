@@ -18,6 +18,7 @@ public class MainActivity4 extends AppCompatActivity {
     private Button buttonAdd;
     private TextView textViewResult;
     private Button multiplyresult;
+    private Button Substraction;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,7 @@ public class MainActivity4 extends AppCompatActivity {
         buttonAdd = findViewById(R.id.submitbtn);
         textViewResult=findViewById(R.id.resultstxtview);
         multiplyresult=findViewById(R.id.multiply);
+        Substraction=findViewById(R.id.sub);
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -53,6 +55,17 @@ public class MainActivity4 extends AppCompatActivity {
                 int no1=Integer.parseInt(editTextNumber1.getText().toString());
                 int no2=Integer.parseInt(editTextNumber2.getText().toString());
                 int result=no1*no2;
+                textViewResult.setText("Result: " + result);
+                textViewResult.getVisibility();
+
+            }
+        });
+        Substraction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int no1=Integer.parseInt(editTextNumber1.getText().toString());
+                int no2=Integer.parseInt(editTextNumber2.getText().toString());
+                int result=no1-no2;
                 textViewResult.setText("Result: " + result);
                 textViewResult.getVisibility();
 
