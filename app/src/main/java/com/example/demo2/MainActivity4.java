@@ -15,8 +15,9 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity4 extends AppCompatActivity {
     private EditText editTextNumber1;
     private EditText editTextNumber2;
-    private Button buttonAdd,next;
+    private Button buttonAdd;
     private TextView textViewResult;
+    private Button multiplyresult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,7 @@ public class MainActivity4 extends AppCompatActivity {
         editTextNumber2 = findViewById(R.id.secondnumber);
         buttonAdd = findViewById(R.id.submitbtn);
         textViewResult=findViewById(R.id.resultstxtview);
+        multiplyresult=findViewById(R.id.multiply);
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -42,6 +44,18 @@ public class MainActivity4 extends AppCompatActivity {
                 int result=no1+no2;
                 textViewResult.setText("Result: " + result);
                 textViewResult.getVisibility();
+            }
+        });
+
+        multiplyresult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int no1=Integer.parseInt(editTextNumber1.getText().toString());
+                int no2=Integer.parseInt(editTextNumber2.getText().toString());
+                int result=no1*no2;
+                textViewResult.setText("Result: " + result);
+                textViewResult.getVisibility();
+
             }
         });
     }
