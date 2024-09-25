@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
    private Button buttonclick;
    private Button Secondbutton;
    private Button Sumbutton;
+   private Button signup;
     private static final String ONESIGNAL_APP_ID = "ca012899-3b04-425e-b87e-5669e8e19a01";
 
     @Override
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         buttonclick = (findViewById(R.id.click));
         Secondbutton=(findViewById(R.id.b1));
         Sumbutton=(findViewById(R.id.addbutton));
+//        signup=(findViewById(R.id.sup));
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -75,5 +77,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, MainActivity4.class));
             }
         });
+//        signup.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//               startActivity(new Intent(MainActivity.this, MainActivity4.class));
+//            }
+//        });
     }
 }

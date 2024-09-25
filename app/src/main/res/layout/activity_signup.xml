@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -16,6 +16,7 @@
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:gravity="center"
+        android:layout_marginTop="25dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:orientation="vertical">
@@ -37,7 +38,8 @@
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="enter your first name"
+        android:inputType="text"
+        android:hint="enter your name"
         android:textSize="25dp"
         android:drawableLeft="@drawable/baseline_account_circle_24"
         android:drawablePadding="30dp"
@@ -46,7 +48,8 @@
         android:id="@+id/lastname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="enter your last name"
+        android:hint="enter your lastname"
+        android:inputType="text"
         android:textSize="25dp"
         android:drawableLeft="@drawable/baseline_account_circle_24"
         android:drawablePadding="30dp"
@@ -55,29 +58,98 @@
         android:id="@+id/phno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="enter your phonenumber"
+        android:hint="enter your phone number"
+        android:inputType="phone"
         android:textSize="25dp"
         android:drawableLeft="@drawable/baseline_add_call_24"
         android:drawablePadding="30dp"/>
+
     <EditText
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Emailid"
+        android:inputType="textEmailAddress"
+        android:hint="emailid"
         android:textSize="25dp"
         android:drawableLeft="@drawable/baseline_assignment_24"
         android:drawablePadding="30dp"/>
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="password"
+            android:textSize="25dp"
+            android:inputType="numberPassword"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:drawablePadding="30dp"
+
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/baseline_girl_24"
+                android:text="Gender"
+                android:textSize="25dp"
+                android:layout_gravity="left"
+                android:gravity="left"/>
 
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/spin1"
+            android:gravity="right"
+            android:layout_marginLeft="100dp"
+            android:layout_gravity="right"
             android:entries="@array/gander"/>
+        </LinearLayout>
         <Button
+            android:id="@+id/sup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Signup"
             android:layout_marginTop="20dp"
             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="forgot password?"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or sign in with"
+            android:layout_marginTop="20dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/fb"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/fb" />
+        <ImageView
+            android:id="@+id/google"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/google" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/twitter" />
+        </LinearLayout>
 
 </LinearLayout>
-</RelativeLayout>
+</ScrollView>

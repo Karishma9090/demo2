@@ -19,6 +19,7 @@ public class MainActivity4 extends AppCompatActivity {
     private Button buttonAdd,next;
     private TextView textViewResult;
     private Button joinbutton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,8 @@ public class MainActivity4 extends AppCompatActivity {
         buttonAdd = findViewById(R.id.submitbtn);
         textViewResult=findViewById(R.id.resultstxtview);
         joinbutton=findViewById(R.id.joinbtn);
+
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -53,5 +56,6 @@ public class MainActivity4 extends AppCompatActivity {
                 startActivity(new Intent(MainActivity4.this, signup.class));
             }
         });
+
     }
 }
