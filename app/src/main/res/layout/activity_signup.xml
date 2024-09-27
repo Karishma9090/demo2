@@ -113,10 +113,16 @@
             android:text="Signup"
             android:layout_marginTop="20dp"
             />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="forgot password?"/>
+        <Button
+            android:id="@+id/log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="login"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
