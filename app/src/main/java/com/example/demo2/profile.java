@@ -1,5 +1,6 @@
 package com.example.demo2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class profile extends AppCompatActivity {
     private EditText fullnametext,email;
-    private Button updatebutton;
+    private Button updatebutton,backbutton;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     class2info class2info;
@@ -35,6 +36,7 @@ public class profile extends AppCompatActivity {
         fullnametext=findViewById(R.id.nametext);
         email=findViewById(R.id.emailid);
         updatebutton=findViewById(R.id.update);
+        backbutton=findViewById(R.id.Bbtn);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("clientInfo");
         class2info= new class2info();
@@ -45,6 +47,12 @@ public class profile extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+        backbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(profile.this, signup.class));
+            }
         });
 
         updatebutton.setOnClickListener(new View.OnClickListener() {
@@ -89,5 +97,12 @@ public class profile extends AppCompatActivity {
 
             }
         });
+        startActivity(new Intent(profile.this, MainActivity6.class));
+//        backbutton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(profile.this, MainActivity6.class));
+            //}
+       // });
     }
 }
