@@ -2,31 +2,35 @@ package com.example.demo2;
 
 public class class4info {
 
-private  String email;
-private  String password;
+private  String eemail;
+private  String epassword;
 
 
 
-public class4info {
+public class4info() {
 }
 
 
 public String getEmail()
 {
 
-    return email;
+    return eemail;
 }
-public void setEmail(String email) {
+public void setEmail(String eemail) {
 
-    this.email = email;
+    this.eemail = eemail;
 }
 
 public String getPassword() {
-    return password;
+
+    return epassword;
 }
-public void setPassword(){
-    this.password=password;
+public void setPassword(String epassword){
+
+    this.epassword=epassword;
 }
+
+
 }
 
 

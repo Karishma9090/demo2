@@ -18,6 +18,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity6 extends AppCompatActivity {
@@ -47,35 +48,36 @@ public class MainActivity6 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        backbtn.setOnClickListener(new View.OnClickListener() {
+
+        joinbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 if (emailidtext.getText().toString().equals("")) {
-                emailidtext.setError("enter your emailid");
+                    emailidtext.setError("enter your emailid");
                 } else if (passwordtext.getText().toString().equals("")) {
                     passwordtext.setError("enter your correct password");
-                }
-                else {
+                } else {
                     Toast.makeText(getApplicationContext(), "All text Filds are correcct", Toast.LENGTH_LONG).show();
-                }
-                String emailid=emailidtext.getText().toString();
-                String password=passwordtext.getText().toString();
-                addDatafirebase(emailid,password);
 
-                startActivity(new Intent(MainActivity6.this, profile.class));
+                String eemail = emailidtext.getText().toString();
+                String epassword = passwordtext.getText().toString();
+                addDatafirebase(eemail, epassword);
 
-        });
-    }
-    }
-    private void addDatafirebase(String name,String emailid) {
-        class4info.setemail(emailid);
-        class4info.setpassword();
+            }
+
+        }
+    });
+}
+private void addDatafirebase(String eemail,String epassword){
+        class4info.setEmail(eemail);
+        class4info.setPassword(epassword);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 databaseReference.setValue(class4info);
                 Toast.makeText(MainActivity6.this, "data added", Toast.LENGTH_SHORT).show();
+
             }
 
             @Override
@@ -84,6 +86,9 @@ public class MainActivity6 extends AppCompatActivity {
 
             }
         });
-        startActivity(new Intent(profile.this, MainActivity6.class));
+        startActivity(new Intent(MainActivity6.this, profile.class));
     }
 }
+
+
+
